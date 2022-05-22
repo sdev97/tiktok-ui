@@ -1,0 +1,20 @@
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Slab:wght@100&family=Leckerli+One&family=Montserrat:wght@300;400;600;700&family=Roboto:wght@300&display=swap');
+
+:root {
+  --primary: #fe2c55;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1.6rem;
+}
