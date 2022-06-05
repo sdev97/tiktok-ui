@@ -9,7 +9,7 @@ import MenuItem from './MenuItem';
 const cx = classNames.bind(styles);
 
 const defaultFn = () => {};
-function Menu({ children, items = [], onChange = defaultFn }) {
+function Menu({ children, items = [], hideOnClick = false, onChange = defaultFn }) {
     const [history, setHistory] = useState([{ data: items }]);
     const current = history[history.length - 1];
 
@@ -36,6 +36,7 @@ function Menu({ children, items = [], onChange = defaultFn }) {
         <Tippy
             interactive="true"
             // visible
+            hideOnClick={hideOnClick}
             delay={[0, 450]}
             placement="bottom-end"
             render={(attrs) => (
@@ -49,7 +50,7 @@ function Menu({ children, items = [], onChange = defaultFn }) {
                                 }}
                             />
                         )}
-                        {renderItems()}
+                        <div className={cx('menu-body')}>{renderItems()}</div>
                     </PopperWrapper>
                 </div>
             )}

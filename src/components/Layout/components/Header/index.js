@@ -20,6 +20,8 @@ import {
 import AccountItem from '~/components/AccountItem';
 import Menu from '~/components/Popper/Menu';
 import Search from '../Search';
+import { Link } from 'react-router-dom';
+import routes from '~/config/routesConfig';
 
 const cx = classNames.bind(styles);
 const MENU_ITEMS = [
@@ -95,7 +97,9 @@ function Header() {
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
                 <div className={cx('logo')}>
-                    <img src={img.logo} alt="tik-tok" />
+                    <Link to={routes.home}>
+                        <img src={img.logo} alt="tik-tok" />
+                    </Link>
                 </div>
 
                 <Search />
@@ -121,7 +125,7 @@ function Header() {
                             <Image
                                 className={cx('user-avatar')}
                                 alt="Nguyen Van A"
-                                src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/d5d7b58b1a7f01f757e6639d0f9aeb83~c5_100x100.jpeg?x-expires=1653962400&x-signature=ESaY%2F1%2FCsjIX06hYZqmUu%2BIFN3s%3D"
+                                src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/ee47786e5044cab4369a3967672159ac~c5_100x100.jpeg?x-expires=1654606800&x-signature=lpvlyDEgSepn2EgV5J24cNkc8EU%3D"
                             />
                         ) : (
                             <button className={cx('more-btn')}>
